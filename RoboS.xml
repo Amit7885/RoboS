@@ -1,1 +1,28 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="comment_comment" id="1" x="-620" y="-449">
+    <field name="TEXT">This is start of the program</field>
+    <next>
+      <block type="movement_forward" id="2">
+        <next>
+          <block type="movement_left" id="3">
+            <next>
+              <block type="oled_cleardisplay" id="4">
+                <next>
+                  <block type="movement_right" id="5">
+                    <next>
+                      <block type="movement_leftmotor" id="6" inline="true">
+                        <next>
+                          <block type="robot_delay" id="7" inline="true"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
