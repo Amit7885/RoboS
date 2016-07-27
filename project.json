@@ -1,0 +1,10 @@
+{
+    "name": "RoboS",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "scratch",
+    "executable": "RoboS.xml",
+    "author": "Amit7885",
+    "minimum_firmware_version": 42
+}
