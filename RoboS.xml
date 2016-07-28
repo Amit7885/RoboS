@@ -6,22 +6,61 @@
         <next>
           <block type="movement_left" id="3">
             <next>
-              <block type="oled_cleardisplay" id="4"></block>
+              <block type="oled_cleardisplay" id="4">
+                <next>
+                  <block type="movement_right" id="11">
+                    <next>
+                      <block type="variables_set" id="9" inline="true">
+                        <field name="VAR">item</field>
+                        <value name="VALUE">
+                          <block type="sensor_line" id="10">
+                            <field name="LINE">MIDDLE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="procedures_callnoreturn" id="15">
+                            <mutation name="essdf"></mutation>
+                            <next>
+                              <block type="multimedia_displaybmp" id="27">
+                                <field name="BMP"></field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
             </next>
           </block>
         </next>
       </block>
     </next>
   </block>
-  <block type="procedures_defnoreturn" id="5" x="-340" y="-433">
+  <block type="procedures_defnoreturn" id="5" x="-294" y="-419">
     <mutation></mutation>
     <field name="NAME">essdf</field>
     <statement name="STACK">
       <block type="movement_leftmotor" id="6" inline="true">
+        <value name="MOVLEFT">
+          <block type="logic_negate" id="12" inline="true">
+            <value name="NUMBER">
+              <block type="logic_compare" id="13" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="14">
+                    <field name="NUM">152</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
         <next>
           <block type="robot_delay" id="7" inline="true">
             <value name="DELAY">
-              <block type="math_number" id="75">
+              <block type="math_number" id="8">
                 <field name="NUM">1000</field>
               </block>
             </value>
@@ -29,29 +68,5 @@
         </next>
       </block>
     </statement>
-  </block>
-  <block type="variables_set" id="9" inline="true" x="-652" y="-320">
-    <field name="VAR">item</field>
-    <value name="VALUE">
-      <block type="sensor_line" id="28">
-        <field name="LINE">MIDDLE</field>
-      </block>
-    </value>
-  </block>
-  <block type="movement_right" id="8" x="-433" y="-252"></block>
-  <block type="logic_negate" id="57" inline="true" x="-268" y="-242">
-    <value name="NUMBER">
-      <block type="logic_compare" id="50" inline="true">
-        <field name="OP">EQ</field>
-        <value name="A">
-          <block type="math_number" id="68">
-            <field name="NUM">152</field>
-          </block>
-        </value>
-      </block>
-    </value>
-  </block>
-  <block type="procedures_callnoreturn" id="10" x="-555" y="-207">
-    <mutation name="essdf"></mutation>
   </block>
 </xml>
